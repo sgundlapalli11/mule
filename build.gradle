@@ -2,7 +2,7 @@ defaultTasks 'execute'
 apply plugin: 'java'
 
 dependencies {
-    testCompile files('./resources/jfxrt.jar')
+compile files("${System.properties['java.home']}/lib/ext/jfxrt.jar")
 }
 
 jar {
