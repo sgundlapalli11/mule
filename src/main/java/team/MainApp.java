@@ -9,13 +9,17 @@ import team.screens.ScreenMaster;
 
 public class MainApp extends Application {
 
-    public static final String MAIN_SCREEN = "main";
-    public static final String MAIN_SCREEN_FXML = "main.fxml";
+    public static final String GAME_CONFIG_SCREEN = "gameConfig";
+    public static final String GAME_CONFIG_FXML = "gameConfig.fxml";
+    public static final String PLAYER_CONFIG_SCREEN = "playerConfig";
+    public static final String PLAYER_CONFIG_FXML = "playerConfig.fxml";
+    public static final String BLANK_SCREEN = "blankScreen";
+    public static final String BLANK_SCREEN_FXML = "blankScreen.fxml";
 
     public void start(Stage stage) throws Exception {
       ScreenMaster main = new ScreenMaster();
-      main.loadScreen(MAIN_SCREEN, MAIN_SCREEN_FXML);
-    	main.displayScreen(MAIN_SCREEN);
+      main.loadScreen(GAME_CONFIG_SCREEN, GAME_CONFIG_SCREEN_FXML);
+    	main.displayScreen(GAME_CONFIG_SCREEN);
 
       Group root = new Group();
       root.getChildren().addAll(main);
