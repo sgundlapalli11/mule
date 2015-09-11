@@ -11,6 +11,10 @@ jar {
     }
 }
 
+test {
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 task execute(type:JavaExec) {
    main = 'team.MainApp'
    classpath = sourceSets.main.runtimeClasspath

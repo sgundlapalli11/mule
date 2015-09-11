@@ -18,7 +18,7 @@ public class MainApp extends Application {
 
     public void start(Stage stage) throws Exception {
       ScreenMaster main = new ScreenMaster();
-      main.loadScreen(GAME_CONFIG_SCREEN, GAME_CONFIG_SCREEN_FXML);
+      main.loadScreen(GAME_CONFIG_SCREEN, GAME_CONFIG_FXML);
     	main.displayScreen(GAME_CONFIG_SCREEN);
 
       Group root = new Group();
