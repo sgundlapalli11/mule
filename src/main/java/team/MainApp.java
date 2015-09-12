@@ -16,15 +16,18 @@ public class MainApp extends Application {
     public static final String BLANK_SCREEN = "blankScreen";
     public static final String BLANK_SCREEN_FXML = "blankScreen.fxml";
 
+    @Override
     public void start(Stage stage) throws Exception {
-      ScreenMaster main = new ScreenMaster();
-      main.loadScreen(GAME_CONFIG_SCREEN, GAME_CONFIG_FXML);
-    	main.displayScreen(GAME_CONFIG_SCREEN);
+        ScreenMaster main = new ScreenMaster();
+        main.loadScreen(GAME_CONFIG_SCREEN, GAME_CONFIG_FXML);
+        main.loadScreen(PLAYER_CONFIG_SCREEN, PLAYER_CONFIG_FXML);
+        main.loadScreen(BLANK_SCREEN, BLANK_SCREEN_FXML);
+      	main.displayScreen(GAME_CONFIG_SCREEN);
 
-      Group root = new Group();
-      root.getChildren().addAll(main);
-      Scene scene = new Scene(root);
-      stage.setScene(scene);
-      stage.show();
+        Group root = new Group();
+        root.getChildren().addAll(main);
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
